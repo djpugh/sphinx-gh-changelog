@@ -1,5 +1,5 @@
 ************************
-gh_changelog
+release_changelog
 ************************
 
 Create a Changelog section from GitHub Releases

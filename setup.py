@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Setup script for gh_changelog
+Setup script for release_changelog
 =========================================
 
 Call from command line as::
@@ -23,7 +23,7 @@ except AttributeError:
 __author__ = 'David Pugh'
 __email__ = 'djpugh@gmail.com'
 
-description = 'Create a Changelog section from GitHub Releases'
+description = 'Create a Changelog section from (GitHub) Releases'
 
 with open('README.rst') as f:
     readme = f.read()
@@ -40,7 +40,7 @@ with open('README.rst') as f:
 # whereas the requirements.txt file should specify pinned versions to
 # generate a repeatable environment
 
-kwargs = dict(name='gh_changelog',
+kwargs = dict(name='release_changelog',
               version=__version__,
               author=__author__,
               author_email=__email__,
@@ -49,10 +49,12 @@ kwargs = dict(name='gh_changelog',
               package_dir={'': 'src'},
               requires=[],
               install_requires=[],
-              provides=['gh_changelog'],
+              provides=['release_changelog'],
               test_suite='tests',
               description=description,
               long_description=readme,
+              license="MIT",
+              entry_points={'release_changelog.providers': ['github=release_changelog.providers.github:GitHubProvider']},
               package_data={'': ['*.rst',
                                  'requirements.txt',
                                  '*.ini',

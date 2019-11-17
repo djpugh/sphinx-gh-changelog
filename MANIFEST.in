@@ -1,3 +1,3 @@
 include requirements.txt
 include versioneer.py
-include src/gh_changelog/_version.py
+include src/release_changelog/_version.py

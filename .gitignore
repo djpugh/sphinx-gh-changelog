@@ -24,3 +24,5 @@ reports/*-py*
 reports/*
 *.c
 .cookiecutterkeep
+~
+.idea
