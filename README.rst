@@ -1,3 +1,7 @@
+Archived due to the better implemented https://github.com/peopledoc/sphinx-github-changelog
+
+---------
+
 ************************
 release_changelog
 ************************
